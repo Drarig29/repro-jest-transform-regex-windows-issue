@@ -1,0 +1,21 @@
+on: push
+
+jobs:
+  tests-on-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unit tests (Linux)
+        run: |
+          npx envinfo --preset jest
+          npm install
+          npm test
+  tests-on-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unit tests (Windows)
+        run: |
+          npx envinfo --preset jest
+          npm install
+          npm test

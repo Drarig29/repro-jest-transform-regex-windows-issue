@@ -2,7 +2,7 @@
 const config = {
   transformIgnorePatterns: ['node_modules/(?!tti-polyfill)'],
   transform: {
-    'tti-polyfill/src/.+\\.js': './jest.babel-transform.js',
+    'tti-polyfill\\\\src\\\\.+\\.js': './jest.babel-transform.js',
   },
 }
 
